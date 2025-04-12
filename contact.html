@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact | Explore World</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+    <a href="index.html" class="w3-bar-item w3-button"><b>Explore</b> World</a>
+    <div class="w3-right w3-hide-small">
+      <a href="index.html#Home " class="w3-bar-item w3-button">Home </a>
+      <a href="about.html" class="w3-bar-item w3-button">About</a>
+      <a href="contact.html" class="w3-bar-item w3-button">Contact</a>
+    </div>
+  </div>
+</div>
+
+<!-- Contact Form -->
+<div class="w3-container w3-padding-64" style="margin-top:60px">
+  <h2>Contact Us</h2>
+  <p>Have a question or need help planning your trip? We're here to help!</p>
+  
+  <form>
+    <input class="w3-input w3-border" type="text" placeholder="Your Name" required>
+    <input class="w3-input w3-section w3-border" type="email" placeholder="Your Email" required>
+    <textarea class="w3-input w3-section w3-border" placeholder="Your Message" required></textarea>
+    <button class="w3-button w3-black w3-section" type="submit">Send Message</button>
+  </form>
+
+</div>
+
+<footer class="w3-center w3-black w3-padding-16">
+  <p>© 2025 Explore World</p>
+</footer>
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const formData = new FormData(this);
+  
+      const response = await fetch('http://localhost:3000/send', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(Object.fromEntries(formData)),
+      });
+  
+      if (response.ok) alert('Message sent!');
+      else alert('Failed to send message.');
+    });
+  </script>
+  
+</body>
+</html>
