@@ -14,16 +14,8 @@
 <div class="w3-top">
     <div class="w3-bar w3-white w3-wide w3-padding w3-card">
   
-      <!-- 🔍 Search Input -->
-      <div class="w3-bar-item" style="padding: 0; display: flex; gap: 8px; align-items: center;">
-        <input id="searchInput" class="w3-input w3-border" type="text" placeholder="Search..." style="height:36px; width:200px; margin-top:4px;">
-        <button class="w3-button w3-blue" onclick="handleSearch()">Search</button>
-        <button class="w3-button w3-grey" onclick="clearSearch()">Clear</button>
-      </div>
-      
-  
       <!-- Brand/Logo -->
-      <a href="#home" class="w3-bar-item w3-button"><b>Travel</b> Website</a>
+      <a href="#home" class="w3-bar-item w3-button"><b>Smart Travel</b></a>
   
       <!-- Right Aligned Menu -->
       <div class="w3-right w3-hide-small">
@@ -38,14 +30,27 @@
 
 <!-- Hero Section -->
 <header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
-  <img class="w3-image" src="images/banner.avif" alt="Travel Banner" width="1500" height="800">
+  <img class="w3-image" src="images/banner.jpg" alt="Travel Banner" width="1500" height="800">
   <div class="w3-display-middle w3-center">
     <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>Explore</b></span> <span class="w3-hide-small w3-text-light-grey">The World</span></h1>
   </div>
 </header>
 
+<!-- Search Bar Section (below banner) -->
+<div class="w3-container w3-padding-32 w3-center">
+    <input
+    id="searchInput"
+    class="w3-input w3-border"
+    type="text"
+    placeholder="Search for Temple, Beach, Country"
+    style="width: 300px; display: inline-block;"
+  />
+      <button class="w3-button w3-blue w3-margin-left" onclick="handleSearch()">Search</button>
+    <button class="w3-button w3-grey w3-margin-left" onclick="clearSearch()">Clear</button>
+  </div>
+  
 <!-- Home  -->
-<div class="w3-content w3-padding" style="max-width:1564px" id="beaches">
+<div class="w3-content w3-padding" style="max-width:1564px;  display: none;" id="beaches">
   <div class="w3-container w3-padding-32">
     <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Popular Beaches</h3>
   </div>
@@ -78,7 +83,7 @@
   </div>
 </div>
 
-<div class="w3-content w3-padding" style="max-width:1564px" id="temples">
+<div class="w3-content w3-padding" style="max-width:1564px;  display: none;" id="temples">
     <div class="w3-container w3-padding-32">
       <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Popular Temples</h3>
     </div>
